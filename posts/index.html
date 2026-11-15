@@ -1,0 +1,12 @@
+---
+layout: default
+title: Posts
+description: Notas de estudo, roteiros e anotações do Serigy Hacker Club.
+---
+<h1>Posts</h1>
+<p>Notas de estudo, roteiros e anotações da comunidade.</p>
+{% if site.posts.size > 0 %}<ul class="posts">
+{% for post in site.posts %}<li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> <span class="meta">· {% include data_br.html data=post.date %}{% if post.author %} · {{ post.author }}{% endif %}{% if post.tags.size > 0 %} · {{ post.tags | join: ", " }}{% endif %}</span><br>{{ post.description }}</li>
+{% endfor %}</ul>
+{% else %}<p>Ainda não há posts.</p>
+{% endif %}

@@ -1,0 +1,11 @@
+---
+layout: default
+---
+<h1>{{ page.title }}</h1>
+<p class="meta">
+  {% include data_br.html data=page.date %}
+  {% if page.tags.size > 0 %} · {{ page.tags | join: ", " }}{% endif %}
+  {% if page.author %} · {{ page.author }}{% endif %}
+</p>
+{{ content }}
+<div class="pager"><a href="{{ '/posts/' | relative_url }}">← Posts</a><span></span></div>

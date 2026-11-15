@@ -1,0 +1,23 @@
+# Ordem da trilha: define a lista da visão geral e os botões "anterior / próximo".
+- label: Visão geral
+  url: /guia/
+- label: Redes
+  titulo: Redes de computadores
+  url: /guia/redes.html
+  desc: Como as máquinas conversam entre si (IP, portas, TCP, DNS, HTTP).
+- label: Sistemas operacionais
+  titulo: Sistemas operacionais
+  url: /guia/sistemas-operacionais.html
+  desc: O que o sistema faz por baixo dos panos (processos, memória, arquivos, permissões).
+- label: Linux
+  titulo: Linux para iniciantes
+  url: /guia/linux.html
+  desc: O terminal, os comandos essenciais e como se sentir em casa.
+- label: Arquitetura
+  titulo: Arquitetura de computadores
+  url: /guia/arquitetura.html
+  desc: CPU, memória, binário, assembly e do código ao executável.
+- label: CTFs
+  titulo: CTFs
+  url: /guia/ctf.html
+  desc: O que são, as categorias, as ferramentas e como jogar a primeira competição.

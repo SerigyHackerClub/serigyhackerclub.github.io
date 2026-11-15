@@ -1,0 +1,14 @@
+---
+layout: default
+---
+{%- comment -%}
+  A posição da página na trilha vem do campo "ordem" no cabeçalho de cada arquivo
+  de guia/ (0 = visão geral, 1 = Redes, ...), na mesma ordem de _data/guia.yml.
+{%- endcomment -%}
+{%- assign itens = site.data.guia -%}
+{%- assign i = page.ordem | default: 0 -%}
+{%- assign anterior = i | minus: 1 -%}
+{%- assign proximo = i | plus: 1 -%}
+<h1>{{ page.title }}</h1>
+{{ content }}
+<div class="pager">{% if i > 0 %}<a href="{{ itens[anterior].url | relative_url }}">← {{ itens[anterior].label }}</a>{% else %}<span></span>{% endif %}{% if proximo < itens.size %}<a href="{{ itens[proximo].url | relative_url }}">{{ itens[proximo].label }} →</a>{% else %}<span></span>{% endif %}</div>

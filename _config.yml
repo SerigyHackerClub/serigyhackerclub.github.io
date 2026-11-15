@@ -1,0 +1,39 @@
+title: Serigy Hacker Club
+description: Comunidade hacker de cibersegurança em Sergipe.
+lang: pt-BR
+timezone: America/Maceio
+
+# Site de usuário (SerigyHackerClub.github.io): deixe baseurl vazio.
+# Se for site de projeto (github.io/nome-do-repo), use baseurl: "/nome-do-repo".
+url: "https://serigyhackerclub.github.io"
+baseurl: ""
+
+# Posts ficam em /posts/nome-do-arquivo.html
+permalink: /posts/:title.html
+
+# Troque o número quando mudar o style.css, para o navegador baixar de novo.
+css_version: 6
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+defaults:
+  - scope:
+      path: "guia"
+    values:
+      layout: guia
+      secao: Guia
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      secao: Posts
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - node_modules

@@ -1,0 +1,74 @@
+:root{--bg:#020101;--fg:#ebebe4;--red:#c8161b;--red-text:#e0343a;--dim:#a3a39b;--line:#2a2a2a;--panel:#0d0b0b;}
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--fg);font:.95rem/1.7 ui-monospace,"JetBrains Mono","Cascadia Code",Menlo,Consolas,monospace}
+a{color:var(--fg);text-decoration-color:var(--red);text-decoration-thickness:2px;text-underline-offset:3px}
+a:hover,a[aria-current]{color:var(--red-text)}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+
+/* estrutura: barra lateral à esquerda, conteúdo à direita */
+.container{display:flex;gap:2px;width:972px;max-width:100%;margin:0 auto;padding-bottom:40px}
+.left-bar{position:relative;flex:0 0 300px}
+.sticky{position:sticky;top:0;max-height:100vh;overflow-y:auto;padding:20px 20px 20px 10px}
+.brand{display:block;margin-bottom:.8rem}
+.logo{display:block;width:9rem;height:auto}
+.sticky p{margin:0 0 .5rem;color:var(--dim)}
+.sticky h3{font-size:1rem;margin:1.4rem 0 .4rem;color:var(--red-text)}
+.sticky h3::before{content:"## ";color:var(--dim)}
+.sticky h3 a{color:var(--red-text)}
+.sticky ul{margin:0;padding-left:1.1rem}
+.sticky li{margin-bottom:.15rem;font-size:.92rem}
+main{flex:1;min-width:0;padding:20px 20px 0 22px}
+
+/* conteúdo */
+h1,h2,h3{line-height:1.2}
+main h1{font-size:clamp(1.7rem,4vw,2.2rem);margin:0 0 1.1rem;color:var(--red-text)}
+main h2{font-size:1.1rem;margin:2.3rem 0 .7rem;color:var(--red-text)}
+main h2::before{content:"## ";color:var(--dim)}
+main h3{font-size:1rem;margin:1.6rem 0 .5rem}
+p{margin:0 0 1rem}
+main ul,main ol{margin:0 0 1rem;padding-left:1.4rem}
+main li{margin-bottom:.35rem}
+li::marker{color:var(--red)}
+code{background:var(--panel);border:1px solid var(--line);padding:.05rem .35rem;font-size:.9em}
+pre{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--red);padding:1rem;overflow-x:auto;margin:0 0 1.2rem;line-height:1.6}
+pre code{background:none;border:0;padding:0;font-size:.86rem}
+table{border-collapse:collapse;display:block;overflow-x:auto;margin:0 0 1.3rem;max-width:100%}
+th,td{border:1px solid var(--line);padding:.45rem .75rem;text-align:left;vertical-align:top}
+th{color:var(--dim);font-weight:500;background:var(--panel)}
+blockquote{margin:1rem 0;padding:.2rem 0 .2rem 1rem;border-left:3px solid var(--red);color:var(--dim)}
+.pager{display:flex;justify-content:space-between;gap:1rem;margin-top:3rem;padding-top:1rem;border-top:1px solid var(--line)}
+footer{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--line);color:var(--dim);font-size:.9rem}
+.pager+footer{margin-top:1.2rem;border-top:0;padding-top:0}
+
+/* posts */
+.meta{color:var(--dim);font-size:.9rem}
+p.meta{margin:-.5rem 0 1.4rem}
+ul.posts{list-style:none;padding-left:0}
+ul.posts li{margin-bottom:1.1rem}
+
+/* home: logo grande e texto centralizados */
+.home main{font-size:1rem}
+.home main h1.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);margin:0;padding:0}
+.hero{display:block;width:min(12rem,60%);height:auto;margin:0 auto 1.5rem}
+.lead{text-align:center;color:var(--dim);margin:0 auto 2.5rem;max-width:34rem}
+.home main h2{margin:2.5rem 0 .75rem}
+.home main ul{margin:0;padding-left:1.25rem}
+.home footer{margin-top:3rem}
+
+/* bloco em duas colunas da página inicial (como o AxéSec) */
+.two-col{display:flex;gap:20px;margin-top:2rem}
+.two-col>div{flex:1;min-width:0}
+.two-col h2{margin-top:0}
+
+/* celular: menu lateral escondido, botão no canto */
+.hamburger{display:none;position:fixed;bottom:13px;left:15px;z-index:999;background:var(--red);color:var(--fg);border:0;border-radius:6px;font-size:1.2rem;padding:12px 16px;cursor:pointer}
+@media(max-width:768px){
+ .container{width:100%;padding:0 12px 40px}
+ .hamburger{display:block}
+ .left-bar{position:fixed;top:0;left:-310px;width:290px;height:100%;flex:none;background:var(--bg);z-index:998;transition:left .3s ease;border-right:2px solid var(--line)}
+ .left-bar.show{left:0}
+ .sticky{max-height:100%;padding-top:20px}
+ .two-col{flex-direction:column;gap:0}
+ main{padding:20px 0 0}
+}
+@media(prefers-reduced-motion:reduce){.left-bar{transition:none}}

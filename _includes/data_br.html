@@ -1,0 +1,2 @@
+{%- assign m = include.data | date: "%-m" | minus: 1 -%}
+{{ include.data | date: "%-d" }} de {{ site.data.meses[m] }} de {{ include.data | date: "%Y" }}

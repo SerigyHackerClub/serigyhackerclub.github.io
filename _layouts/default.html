@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="{{ site.lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.secao %}{{ page.title | escape }} · {{ page.secao }} · {{ site.title }}{% elsif page.url == '/' %}{{ site.title }}{% else %}{{ page.title | escape }} · {{ site.title }}{% endif %}</title>
+<meta name="description" content="{{ page.description | default: site.description | escape }}">
+<link rel="icon" href="{{ '/favicon.png' | relative_url }}">
+<link rel="stylesheet" href="{{ '/style.css' | relative_url }}?v={{ site.css_version }}">
+</head>
+<body{% if page.body_class %} class="{{ page.body_class }}"{% endif %}>
+<div class="container">
+{% include sidebar.html %}
+<main>
+{{ content }}
+<footer>Serigy Hacker Club · Sergipe, Brasil</footer>
+</main>
+</div>
+<script>document.addEventListener("DOMContentLoaded",function(){var b=document.querySelector(".hamburger"),m=document.querySelector(".left-bar");if(b&&m){b.addEventListener("click",function(){var s=m.classList.toggle("show");b.setAttribute("aria-expanded",s)})}});</script>
+</body>
+</html>
