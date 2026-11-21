@@ -55,6 +55,8 @@ ul.posts li{margin-bottom:1.1rem}
 .home main ul{margin:0;padding-left:1.25rem}
 .home footer{margin-top:3rem}
 
+/* [2/3] U1AzVDFOR18x */
+
 /* bloco em duas colunas da página inicial (como o AxéSec) */
 .two-col{display:flex;gap:20px;margin-top:2rem}
 .two-col>div{flex:1;min-width:0}
