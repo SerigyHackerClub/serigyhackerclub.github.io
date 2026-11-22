@@ -31,6 +31,9 @@ defaults:
       layout: post
       secao: Posts
 
+plugins:
+  - jekyll-sitemap
+
 exclude:
   - Gemfile
   - Gemfile.lock
