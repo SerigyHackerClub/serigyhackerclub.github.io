@@ -1,0 +1,100 @@
+/* Voz de Londres - styles scoped for the OSINT challenge pages */
+.vl-shell { --vl-bg:#0b1016; --vl-card:#111922; --vl-line:#26323e; --vl-text:#e5eaf0; --vl-muted:#8c9aa8; --vl-accent:#b7d1c2; --vl-red:#d17b72; color:var(--vl-text); max-width:1120px; margin:28px auto; padding:0 22px 28px; font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+.vl-shell * { box-sizing:border-box; }
+.vl-shell a { color:inherit; text-decoration:none; }
+.vl-topbar { display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--vl-line); padding:0 0 16px; gap:12px; }
+.vl-brand { display:flex; align-items:center; gap:11px; font-weight:750; letter-spacing:.03em; }
+.vl-mark { display:grid; place-items:center; width:35px; height:35px; border:1px solid var(--vl-accent); color:var(--vl-accent); font-size:12px; letter-spacing:.1em; }
+.vl-muted { color:var(--vl-accent); }
+.vl-status,.vl-kicker,.vl-tag,.vl-section-head>span,.vl-post-foot,.vl-side-title,.vl-side-row,.vl-hero-meta,.vl-footer,.vl-forum-label,.vl-forum-head,.vl-forum-field small,.vl-forum-foot,.vl-locked { font:600 10px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; letter-spacing:.09em; color:var(--vl-muted); }
+.vl-status { display:flex; align-items:center; gap:7px; }
+.vl-status i { display:inline-block; width:6px; height:6px; border-radius:50%; background:#8ab59b; box-shadow:0 0 8px #8ab59b66; }
+.vl-hero { padding:48px 0 34px; border-bottom:1px solid var(--vl-line); }
+.vl-kicker { color:var(--vl-accent); margin-bottom:15px; }
+.vl-hero h1,.vl-forum-page h1 { margin:0; font-size:clamp(34px,5.4vw,62px); line-height:1.04; letter-spacing:-.055em; font-weight:760; }
+.vl-hero h1 em,.vl-forum-page h1 em { color:var(--vl-accent); font-style:normal; }
+.vl-hero p { max-width:620px; margin:19px 0 25px; line-height:1.7; color:#aeb9c4; font-size:14px; }
+.vl-hero-meta { display:flex; flex-wrap:wrap; gap:22px; color:#c2d1c7; }
+.vl-layout { display:grid; grid-template-columns:minmax(0,1fr) 290px; gap:26px; padding-top:28px; }
+.vl-section-head { display:flex; justify-content:space-between; align-items:center; margin:0 0 13px; }
+.vl-section-head h2 { margin:0; font-size:15px; letter-spacing:-.02em; }
+.vl-section-head>span { font-size:9px; }
+.vl-post,.vl-side-card,.vl-profile-summary,.vl-forum-card { background:var(--vl-card); border:1px solid var(--vl-line); border-radius:9px; }
+.vl-post { padding:17px 18px 12px; margin-bottom:12px; }
+.vl-post-head { display:flex; align-items:center; gap:11px; }
+.vl-avatar { width:38px; height:38px; border-radius:50%; object-fit:cover; border:1px solid #35414b; flex-shrink:0; }
+.vl-post-head strong { display:block; font-size:12px; }
+.vl-post-head small { display:block; color:var(--vl-muted); font-size:10px; margin-top:3px; }
+.vl-tag { margin-left:auto; border:1px solid var(--vl-line); padding:3px 7px; border-radius:4px; }
+.vl-post-text { font-size:14px; line-height:1.7; margin:15px 0 17px; color:#dce3e9; }
+.vl-post-foot { display:flex; justify-content:space-between; border-top:1px solid #202a34; padding-top:9px; font-size:9px; }
+.vl-attachment,.vl-file-row { display:flex; align-items:center; gap:10px; background:#0d141c; border:1px solid #26323e; border-radius:6px; padding:10px; margin:0 0 14px; }
+.vl-file-icon { font-size:22px; color:var(--vl-accent); }
+.vl-attachment strong,.vl-file-row strong { display:block; font-size:11px; }
+.vl-attachment small,.vl-file-row small { display:block; color:var(--vl-muted); font-size:10px; margin-top:3px; }
+.vl-locked { margin-left:auto; font-size:8px; text-align:right; }
+.vl-sidebar { display:flex; flex-direction:column; gap:12px; }
+.vl-side-card { padding:16px; }
+.vl-side-title { color:var(--vl-accent); margin-bottom:12px; }
+.vl-number { font:700 30px ui-monospace,monospace; letter-spacing:-.04em; }
+.vl-side-card p { color:#aeb9c4; font-size:12px; line-height:1.6; margin:8px 0 13px; }
+.vl-divider { border-top:1px solid var(--vl-line); margin:12px 0; }
+.vl-side-row { display:flex; justify-content:space-between; padding:6px 0; font-size:9px; }
+.vl-side-row strong { color:#dce3e9; font-weight:600; }
+.vl-objective { color:#dce3e9!important; }
+.vl-clues { list-style:none; padding:0; margin:0; }
+.vl-clues li { color:var(--vl-muted); font-size:11px; border-top:1px solid #202a34; padding:8px 0; }
+.vl-note { display:flex; gap:10px; }
+.vl-note-icon { color:var(--vl-accent); font-size:20px; }
+.vl-note p { margin:0!important; }
+.vl-profile-links { display:grid; gap:10px; margin-bottom:24px; }
+.vl-profile-card,.vl-link-card { display:flex; align-items:center; gap:11px; padding:12px; border:1px solid var(--vl-line); border-radius:8px; background:#101820; transition:border-color .2s,transform .2s; }
+.vl-profile-card:hover,.vl-link-card:hover { border-color:#718c7d; transform:translateY(-1px); }
+.vl-profile-card img { width:40px; height:40px; object-fit:cover; border-radius:50%; }
+.vl-profile-card div,.vl-link-card div { flex:1; min-width:0; }
+.vl-profile-card strong,.vl-link-card strong { display:block; font-size:12px; }
+.vl-profile-card small,.vl-link-card small { display:block; font-size:10px; color:var(--vl-muted); margin-top:3px; }
+.vl-profile-card>span,.vl-link-card>span:last-child { color:var(--vl-accent); font:10px ui-monospace,monospace; }
+.vl-footer { display:flex; justify-content:space-between; padding-top:22px; margin-top:20px; border-top:1px solid var(--vl-line); font-size:9px; }
+.vl-footer span { color:#52616f; }
+.vl-subpage { max-width:900px; }
+.vl-back { color:var(--vl-muted)!important; font:10px ui-monospace,monospace; letter-spacing:.08em; }
+.vl-back:hover { color:var(--vl-accent)!important; }
+.vl-profile-page { max-width:760px; margin:26px auto; }
+.vl-cover { height:135px; border-radius:10px 10px 0 0; background:radial-gradient(ellipse at 80% 20%,#35473f 0,#17211f 30%,#121a21 68%); border:1px solid var(--vl-line); }
+.vl-cover-alt { background:radial-gradient(ellipse at 20% 30%,#3b3833 0,#1d1c1b 30%,#121a21 70%); }
+.vl-profile-summary { padding:0 20px 18px; border-radius:0 0 9px 9px; margin-bottom:22px; }
+.vl-profile-avatar { width:86px; height:86px; object-fit:cover; border-radius:50%; border:4px solid var(--vl-card); margin-top:-43px; position:relative; }
+.vl-profile-name { display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-top:8px; }
+.vl-profile-name h1 { margin:0; font-size:24px; letter-spacing:-.04em; }
+.vl-badge { font:9px ui-monospace,monospace; letter-spacing:.06em; color:var(--vl-accent); border:1px solid #35473f; border-radius:4px; padding:4px 6px; }
+.vl-bio { color:#aeb9c4; font-size:13px; margin:10px 0 13px; }
+.vl-profile-stats { display:flex; gap:20px; color:var(--vl-muted); font-size:11px; margin-bottom:15px; }
+.vl-profile-stats b { color:#dce3e9; }
+.vl-file-row { margin-bottom:0; }
+.vl-profile-feed { margin-bottom:22px; }
+.vl-comment { margin-left:14px; border-left:2px solid #34463e; border-radius:0 8px 8px 0; }
+.vl-avatar-text { display:grid; place-items:center; color:var(--vl-accent); font:14px ui-monospace,monospace; background:#1b2b27; }
+.vl-link-card { margin-top:12px; }
+.vl-forum-page { max-width:700px; margin:45px auto; }
+.vl-forum-label { color:var(--vl-accent); margin-bottom:14px; }
+.vl-forum-page h1 { font-size:clamp(30px,5vw,48px); margin-bottom:25px; }
+.vl-forum-card { overflow:hidden; }
+.vl-forum-head,.vl-forum-foot { display:flex; align-items:center; gap:12px; padding:13px 17px; border-bottom:1px solid var(--vl-line); }
+.vl-archived { color:var(--vl-red); border:1px solid #52332f; border-radius:4px; padding:3px 6px; font-size:9px; }
+.vl-forum-body { padding:21px; }
+.vl-forum-body h2 { margin:0; font-size:20px; }
+.vl-forum-location { color:var(--vl-muted); font-size:12px; margin:6px 0 21px; }
+.vl-forum-field { border-top:1px solid var(--vl-line); padding:12px 0; }
+.vl-forum-field small { display:block; margin-bottom:5px; }
+.vl-forum-field strong { font-size:12px; font-weight:600; }
+.vl-forum-body blockquote { margin:13px 0 0; border-left:2px solid var(--vl-accent); padding:10px 14px; background:#0d141c; color:#dce3e9; font-size:13px; line-height:1.8; }
+.vl-forum-body blockquote span { color:var(--vl-muted); font-size:11px; }
+.vl-forum-foot { border:0; border-top:1px solid var(--vl-line); font-size:9px; flex-wrap:wrap; }
+.vl-forum-foot strong { color:#dce3e9; }
+.vl-spacer { flex:1; }
+.vl-evidence-note { display:flex; gap:12px; border:1px dashed #35473f; border-radius:8px; padding:14px; margin:14px 0 22px; color:var(--vl-accent); }
+.vl-evidence-note p { margin:0; color:#aeb9c4; font-size:12px; line-height:1.65; }
+.vl-link-icon { font-size:19px; color:var(--vl-accent); }
+@media(max-width:800px) { .vl-layout { grid-template-columns:1fr; } .vl-sidebar { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); } .vl-note { grid-column:1/-1; } }
+@media(max-width:520px) { .vl-shell { padding:0 13px 22px; margin:14px auto; } .vl-hero { padding:35px 0 26px; } .vl-hero-meta { gap:11px; font-size:9px; } .vl-sidebar { grid-template-columns:1fr; } .vl-status { font-size:8px; } .vl-post { padding:14px; } .vl-locked { display:none; } .vl-footer { font-size:8px; } .vl-forum-foot { gap:7px; } }
