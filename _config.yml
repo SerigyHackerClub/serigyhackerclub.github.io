@@ -12,7 +12,7 @@ baseurl: ""
 permalink: /posts/:title.html
 
 # Troque o número quando mudar o style.css, para o navegador baixar de novo.
-css_version: 6
+css_version: 8
 
 markdown: kramdown
 kramdown:
